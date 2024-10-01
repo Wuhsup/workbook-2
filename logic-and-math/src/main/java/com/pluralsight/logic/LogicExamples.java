@@ -40,12 +40,33 @@ public class LogicExamples {
         System.out.println(y); // 7.99
 
         double z = 8.33f;
-        System.out.println(z);
+        System.out.println(z); // what value prints here?
 
 
         System.out.printf("%2f\n", z);
+        System.out.println(z); // what value prints here?
 
+        boolean amIDone = false;
+        int counter = 0;
+        do {
+            System.out.println("talking.... words....");
+            counter ++;
+            if (counter++ == 5) amIDone = true;
+        } while( ! amIDone);
+        System.out.println(counter);
 
+        counter =0;
+        while(counter != 5){
+            System.out.println("talking.... words....");
+            counter ++;
+        }
 
+        for (int i=0; i<5; i++) {
+            System.out.println("Talking...");
+        }
+
+        if (counter >0) {
+            System.out.println("We talked about it");
+        }
     }
 }
