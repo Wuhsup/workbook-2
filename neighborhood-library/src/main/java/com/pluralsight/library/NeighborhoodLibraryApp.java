@@ -11,14 +11,14 @@ public class NeighborhoodLibraryApp {
     static boolean isRunning;
 
     public static void main(String[] arg) {
-        launchLibrary();
+        runLibrary();
         scanner = new Scanner(System.in);
 
         showStoreHomeScreen();
     }
 
-    private static void launchLibrary() {
-    }
+//    private static void launchLibrary() {
+//    }
 
     public static void runLibrary(){
         books.add(new Book(1, "12345", "The Hunger Games", false, ""));
@@ -68,7 +68,7 @@ public class NeighborhoodLibraryApp {
                     presentAvailableBooks();
                     break;
                 case "b":
-                    printCheckoutBooks();
+                    printCheckedOutBooks();
                     break;
                 case "c":
                     isRunning = false;
@@ -140,7 +140,7 @@ public class NeighborhoodLibraryApp {
         return false;
     }
 
-    public static void printCheckoutBooks(){
+    public static void printCheckedOutBooks(){
         for(Book book: books){
             if(book.isCheckedOut()){
                 System.out.println(book.getTitle());
